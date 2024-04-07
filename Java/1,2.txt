@@ -1,0 +1,84 @@
+1 a) Celsius to Fahrenheit:
+
+import java.util.*;
+public class CelsiusToFahrenheit 
+{ 
+   public static void main(String[] args) 
+   {
+       Scanner scanner=new SCanner(System.in);
+       double celsius = scanner.nextDouble();
+       double fahrenheit = (celsius * 9/5) + 32;
+       System.out.println("Temperature in Fahrenheit: " + fahrenheit);
+       scanner.close();
+   }
+}
+
+1 b) BMI Calculator:
+
+import java.util.*; 
+public class BMICalculator 
+{
+    public static void main(String[] args) 
+    {
+        Scanner scanner = new Scanner(System.in);
+        double weight = scanner.nextDouble();
+        double height = scanner.nextDouble();
+        double bmi = weight / (height * height);
+        System.out.println("Your BMI is: " + (int)bmi);
+        scanner.close();
+    }
+}
+
+2 a) Purchase cost calculator:
+
+import java.util.*;
+public class PurchaseCostCalculator 
+{ 
+   public static void main(String[] args) 
+   {
+      Scanner scanner = new Scanner(System.in);
+      double purchaseAmount = scanner.nextDouble();
+      double totalCost;
+      if(purchaseAmount > 1000) 
+      {
+         totalCost = purchaseAmount * 0.9;
+      } 
+      else if(purchaseAmount >= 500 && purchaseAmount <= 1000) 
+      {
+         totalCost = purchaseAmount * 0.95;
+      } 
+      else 
+      {
+         totalCost = purchaseAmount;
+      }
+      System.out.println("Total cost after discount: " + totalCost);
+      scanner.close();
+  }
+} 
+
+2 b) 
+
+import java.util.*;
+public class NumberClassifier 
+{
+   public static void main(String[] args) 
+   { 
+      Scanner scanner = new Scanner(System.in);
+      double number = scanner.nextDouble();
+      if (number > 0) 
+      {
+         System.out.println("The entered number is positive.");
+      } 
+      else if(number < 0)
+      {
+         System.out.println("The entered number is negative.");
+      } 
+      else 
+      {
+         System.out.println("The entered number is zero.");
+      }
+      scanner.close();
+   }
+}
+
+
