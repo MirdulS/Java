@@ -1,0 +1,711 @@
+java:
+
+1)
+Imagine you're a software developer working on a project in a remote village. One day, an elderly
+villager approaches you, intrigued by your work. They share stories of their youth, when converting
+temperatures required complex calculations. Curious, they ask how your program, which converts
+Celsius to Fahrenheit, might have impacted their past.
+Sample Input:
+31
+Expected Output:
+Temperature in Fahrenheit: 87.8
+ANSWER :
+import java.util.*;
+public class Celsius
+{
+public static void main(String[] args)
+{
+Scanner se=new Scanner(System.in);
+double c=se.nextDouble();
+System.out.println("Temperature in Fahrenheit: "+((c*9/5)+32));
+}
+}
+2)
+You are developing a BMI calculator for a health app. During the onboarding process, users are
+prompted to input their weight and height. Implement a program where users can enter their weight
+in kilograms and height in meters. Your program should then compute and display their Body Mass
+Index (BMI). This tool helps users track their health and fitness progress.
+Sample Input:
+70
+1.75
+Expected Output:
+Your BMI is: 22
+ANSWER :
+import java.util.*;
+
+public class BMI
+{
+public static void main(String[] args)
+{
+Scanner s=new Scanner(System.in);
+double wei=s.nextDouble();
+double hei=s.nextDouble();
+double a1=wei/(hei*hei);
+System.out.println("Your BMI is: "+(int)a1);
+}
+}
+3)
+You're developing a retail billing system. Develop a program that calculates the total cost of a
+purchase after applying discounts. If the purchase is over $1000, apply a 10% discount; between
+$500 and $1000, apply 5%; otherwise, no discount. Prompt users for the purchase amount, then
+display the total cost after discount.
+Sample Input:
+1500
+Expected Output:
+Total cost after discount: 1350.0
+ANSWER :
+import java.util.*;
+public class mai
+{
+public static void main(String[] args)
+{
+Scanner s=new Scanner(System.in);
+float a=s.nextInt();
+if(a>1000)
+{
+System.out.println("Total cost after discount: "+(a-(a*10/100)));
+}
+
+else if(a>=500 && a<=1000)
+{
+System.out.println("Total cost after discount: "+(a-(a*5/100)));
+}
+else
+{
+System.out.println("Total cost after discount: "+(a));
+}
+}
+}
+4)
+You've created a simple program that prompts users to input a number. Once the number is entered,
+the program analyzes it to determine if it's positive, negative, or zero. Based on this analysis, it
+provides immediate feedback to the user regarding the nature of the number.
+Sample Input:
+5
+Expected Output:
+The entered number is positive.
+ANSWER :
+import java.util.*;
+public class mai
+{
+public static void main(String[] args)
+{
+Scanner s=new Scanner(System.in);
+int a=s.nextInt();
+if(a<0)
+{
+System.out.println("The entered number is negative.");
+}
+else if(a==0)
+{
+
+System.out.println("The entered number is zero.");
+}
+else
+{
+System.out.println("The entered number is positive.");
+}
+}
+}
+5)
+Imagine you're a teacher creating a fun learning tool. With your program, generate multiplication
+tables from 1 to 10 for each number entered. Every loop iteration reveals a new set of answers,
+fostering a deeper understanding of multiplication.
+Sample Input:
+5
+Expected Output:
+Multiplication table for 5:
+5 × 1 = 5
+5 × 2 = 10
+5 × 3 = 15
+5 × 4 = 20
+5 × 5 = 25
+5 × 6 = 30
+5 × 7 = 35
+5 × 8 = 40
+5 × 9 = 45
+5 × 10 = 50
+ANSWER :
+import java.util.*;
+public class mai
+{
+public static void main(String[] args)
+{
+
+Scanner s=new Scanner(System.in);
+int a=s.nextInt();
+System.out.println("Multiplication table for "+a+":");
+for(int i=1;i<=10;i++)
+{
+System.out.println(a+" × "+i+" = "+(a*i));
+}
+}
+}
+6)
+Imagine you're a mathematical consultant assisting clients with number inquiries. A user enters a
+positive integer, seeking its factors. Implement a program to help the user to find the factors the
+numbers.
+Sample Input :
+10
+Expected Output :
+Factors of 10: 1 2 5 10
+ANSWER :
+import java.util.*;
+public class mai
+{
+public static void main(String[] args)
+{
+Scanner s=new Scanner(System.in);
+int a=s.nextInt();
+System.out.print("Factors of "+a+": ");
+for(int i=1;i<=a;i++)
+{
+if(a%i==0)
+System.out.print(i+" ");
+}
+
+}
+}
+7)
+Imagine you're a curious explorer delving into the world of prime numbers. Envision seekers
+inputting their chosen numbers eagerly. Implement a program to traverse through each number's
+factors up to its square root, determining its primality. Each iteration brings you closer to unraveling
+the mysteries of prime numbers.
+Sample Input:
+5
+Expected Output:
+5 is a prime number.
+ANSWER :
+import java.util.*;
+public class mai
+{
+public static void main(String[] args)
+{
+Scanner s=new Scanner(System.in);
+int a=s.nextInt();
+int f=0;
+for(int i=2;i<a;i++)
+{
+if(a%i==0)
+{
+f=1;
+System.out.print(a+" is not a prime number.");
+break;
+}
+}
+if(f==0)
+System.out.print(a+" is a prime number.");
+} }
+
+8)
+Imagine you're a software developer creating a tool for numerical transformations. A user, fascinated
+by number manipulation, inputs a positive integer. Implement a program to gracefully reverse the
+digits of their number using a while loop, providing them with the mirror image of their input for
+exploration
+Sample Input:
+123
+Expected Output:
+Reversed number: 321
+ANSWER :
+import java.util.*;
+public class mai
+{
+public static void main(String[] args)
+{
+Scanner s=new Scanner(System.in);
+int a=s.nextInt();
+int temp=a;
+int rev=0;
+if(a>0)
+{
+while(temp!=0)
+{
+int rem=temp%10;
+rev=rev*10+rem;
+temp/=10;
+}
+System.out.print("Reversed number: "+rev);
+}
+else
+{
+System.out.print("Error: Please enter a positive integer.");
+
+}
+
+}
+}
+9)
+Imagine you're developing software for a weather monitoring station. You're tasked with creating a
+program to analyze temperature data stored in an array of doubles. Your goal is to determine the
+maximum temperature recorded and its corresponding time index.
+Sample Input:
+5
+25.5
+30.0
+28.3
+29.7
+27.8
+Expected Output:
+Maximum Temperature: 30.0
+Index of Maximum Temperature: 1
+ANSWER :
+import java.util.*;
+public class mai
+{
+public static void main(String[] args)
+{
+Scanner s=new Scanner(System.in);
+int a=s.nextInt();
+float[] arr=new float[a];
+for(int i=0;i<a;i++)
+{
+arr[i]=s.nextFloat();
+}
+float max=arr[0];
+
+int index=0;
+for(int i=0;i<a;i++)
+{
+if(max<arr[i]){
+max=arr[i];
+index=i;}
+}
+System.out.println("Maximum Temperature: "+max);
+System.out.print("Index of Maximum Temperature: "+index);
+}
+}
+10)
+You're developing software for a temperature monitoring system. Your task is to create a program
+that analyzes temperature data stored in an array of integers. The program finds the highest
+recorded temperature, along with its index.
+
+Sample Input:
+5
+10 20 30 40 50
+Expected Output:
+Maximum Element: 50
+Index of Maximum Element: 4
+ANSWER :
+import java.util.*;
+public class mai
+{
+public static void main(String[] args)
+{
+Scanner s=new Scanner(System.in);
+int a=s.nextInt();
+int[] arr=new int[a];
+for(int i=0;i<a;i++)
+
+{
+arr[i]=s.nextInt();
+}
+int max=arr[0];
+int b=0;
+for(int i=0;i<a;i++)
+{
+if(max<arr[i])
+{
+max=arr[i];
+b=i;
+}
+}
+System.out.println("Maximum Element: "+max);
+System.out.print("Index of Maximum Element: "+b);
+}
+}
+11)
+You're developing software for a financial analytics tool. Your task is to design a program to
+process a dataset stored in a 2D array of integers. The program calculates the total value of
+all entries in the dataset and prints the result.
+Sample Input:
+1 2 3
+4 5 6
+7 8 9
+Expected Output:
+Sum of all elements in the 2D array: 45
+ANSWER :
+import java.util.*;
+public class mai
+{
+
+public static void main(String[] args)
+{
+Scanner s=new Scanner(System.in);
+int sum=0;
+while(s.hasNextLine())
+{
+int a=s.nextInt();
+sum+=a;
+}
+System.out.print("Sum of all elements in the 2D array: "+sum);
+}
+}
+12)
+You're developing a data analysis tool for financial data. Your task is to develop a program to
+process a dataset stored in a 2D array of doubles. The program identifies the highest value in
+the dataset, along with its corresponding row and column indices.
+Sample Input:
+3
+3
+1.1 2.2 3.3
+4.4 5.5 6.6
+7.7 8.8 9.9
+Expected Output:
+Maximum Element: 9.9
+Row Index of Maximum Element: 2
+Column Index of Maximum Element: 2
+ANSWER :
+import java.util.*;
+public class mai
+{
+
+public static void main(String[] args)
+{
+Scanner s=new Scanner(System.in);
+int a=s.nextInt();
+int b=s.nextInt();
+double[][] arr=new double[a][b];
+for(int i=0;i<a;i++)
+{
+for(int j=0;j<b;j++)
+{
+arr[i][j]=s.nextDouble();
+}
+}
+int indexrow=0;
+int indexcol=0;
+double max=arr[0][0];
+for(int i=0;i<a;i++)
+{
+for(int j=0;j<b;j++)
+{
+if(max<arr[i][j])
+{
+max=arr[i][j];
+indexrow=i;
+indexcol=j;
+}
+}
+}
+System.out.println("Maximum Element: "+max);
+System.out.println("Row Index of Maximum Element: "+indexrow);
+System.out.println("Column Index of Maximum Element: "+indexcol);
+
+}
+}
+13)
+As a linguistic data analyst, you're developing a Text Refinement Tool to process text inputs.
+Users expect the tool to remove duplicate characters and count occurrences of vowels for
+linguistic analysis. The tool accepts a string as input and redefines it, presenting the refined
+text without duplicate characters and providing counts of vowels. Design a program that
+meets these requirements efficiently.
+Sample Input:
+aeiouu
+Expected Output:
+aeiou
+a1
+e1
+i1
+o1
+u2
+ANSWER :
+import java.util.*;
+public class mai
+{
+public static void main(String[] args)
+{
+Scanner sc=new Scanner(System.in);
+String s=sc.nextLine();
+String dup=s;
+String uni=" ";
+for(int i=0;i<s.length();i++)
+{
+String ch=String.valueOf(s.charAt(i));
+if(!uni.contains(ch))
+
+{
+uni+=ch;
+}
+}
+s=s.toLowerCase();
+int a=0,e=0,i=0,o=0,u=0;
+for(int j=0;j<s.length();j++)
+{
+String ch=String.valueOf(s.charAt(j));
+if(ch.equals("a"))
+{
+a++;
+}
+else if(ch.equals("e"))
+{
+e++;
+}
+else if(ch.equals("i"))
+{
+i++;
+}else if(ch.equals("o"))
+{
+o++;
+}else if(ch.equals("u"))
+{
+u++;
+}
+}
+if(a==0&&e==0&&i==0&&o==0&&u==0)
+{
+System.out.println(dup);
+
+System.out.println("No vowels found.");
+}
+else
+{
+System.out.println(uni);
+}
+if(a>0){
+System.out.println("a"+a);
+}
+if(e>0){
+System.out.println("e"+e);
+}
+if(i>0){
+System.out.println("i"+i);
+}
+if(o>0){
+System.out.println("o"+o);
+}
+if(u>0){
+System.out.println("u"+u);
+}
+}
+}
+14)
+You are tasked with enhancing a popular text-editing app with a new feature to stylize text
+for a more captivating presentation. With the app's extensive user base, efficiency and
+performance are critical considerations. Users desire a feature that reverses the word order
+of their input sentence while alternating the case of each letter, starting with uppercase for a
+visually engaging effect.
+Sample Input:
+hello world
+Expected Output:
+
+WORLD HELLO
+ANSWER :
+import java.util.*;
+class mai
+{
+public static void main(String[] args)
+{
+Scanner sc=new Scanner(System.in);
+String s=sc.nextLine();
+String[] arr=s.split(" ");
+for(int i=arr.length-1;i>=0;i--)
+{
+for(Character c:arr[i].toCharArray())
+{
+if(c>='a'&&c<='z')
+{
+System.out.print(Character.toUpperCase(c));
+}
+else
+{
+System.out.print(Character.toLowerCase(c));
+}
+}
+System.out.print(" ");
+}
+}
+}
+15)
+You are working as a software developer for a company that processes text documents. Your
+team is tasked with developing a tool that analyzes text files to gather specific statistics. The
+tool should be able to read a text file named input.txt, calculate the number of characters,
+words, and lines in the file, and display these statistics to the user.
+
+Sample Input:
+Hello, this is a sample text file.
+It contains multiple lines with words and characters.
+Let's analyze this text using Java.
+Expected Output:
+Character count: 94
+Word count: 18
+Line count: 3
+ANSWER :
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+public class TextFileAnalyzer {
+public static void main(String[] args) {
+String fileName = "input.txt";
+int charCount = 0;
+int wordCount = 0;
+int lineCount = 0;
+try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
+String line;
+while ((line = br.readLine()) != null) {
+lineCount++;
+String[] words = line.split("\\s+");
+wordCount += words.length;
+for (String word : words) {
+charCount += word.length();
+}
+}
+} catch (IOException e) {
+System.err.println("Error reading the file: " + e.getMessage());
+
+return;
+}
+System.out.println("Character count: " + charCount);
+System.out.println("Word count: " + wordCount);
+System.out.println("Line count: " + lineCount);
+}
+}
+16)
+Assume that you are tasked with a program that prompts the user to enter a file name. The
+program should then check if the file exists in the current directory. If the file exists, it should
+display a message saying "File found!" along with the absolute path of the file. If the file
+does not exist, it should display a message saying "File not found!".
+Sample Input:
+Enter the file name:
+sample.txt
+Expected Output:
+File found!
+Absolute path: C:\path\to\your\directory\sample.txt
+ANSWER :
+import java.io.File;
+import java.util.Scanner;
+public class FileExistenceChecker {
+public static void main(String[] args) {
+Scanner scanner = new Scanner(System.in);
+System.out.println("Enter the file name:");
+String fileName = scanner.nextLine();
+File file = new File(fileName);
+if (file.exists()) {
+System.out.println("File found!");
+System.out.println("Absolute path: " + file.getAbsolutePath());
+} else {
+System.out.println("File not found!");
+
+}
+scanner.close();
+}
+}
+17)
+Imagine you're developing a utility to determine users' current ages for a registration
+platform. Develop a program that prompts users to input their birth year.
+Sample Input:
+1998
+Expected Output:
+26
+ANSWER :
+import java.util.*;
+class mai
+{
+public static void main(String[] args)
+{
+Scanner s=new Scanner(System.in);
+int a=s.nextInt();
+int age=0;
+if(a>=0)
+{
+System.out.print(2024-a);
+}
+else
+{
+System.out.print("Invalid input. Birth year cannot be negative.");
+}
+}
+}
+18)
+
+In a financial application, Your task is to implement a function to round transaction amounts
+to the nearest integer to ensure accurate representation of monetary values in reports and
+accounting records.
+Sample Input:
+5.7
+Expected Output:
+Rounded number: 6
+ANSWER :
+import java.util.*;
+public class mai
+{
+public static void main(String[] args)
+{
+Scanner s=new Scanner(System.in);
+double n=s.nextDouble();
+System.out.print("Rounded number: "+Math.round(n));
+}
+}
+19)
+Imagine you are developing a text analysis tool for a language teacher. The tool aims to help
+teachers identify specific writing patterns in their students' essays. One of the patterns they
+want to analyze is the frequent use of short words starting with 'a' or 'A'.
+Sample Input:
+Enter a sentence: Apple and ant are animals.
+Expected Output:
+Short words starting with 'a' or 'A' and having exactly three characters:
+and
+are
+ANSWER :
+import java.util.Scanner;
+import java.util.regex.Matcher;
+
+import java.util.regex.Pattern;
+public class ShortWordsAnalyzer {
+public static void main(String[] args) {
+Scanner scanner = new Scanner(System.in);
+System.out.print("Enter a sentence: ");
+String sentence = scanner.nextLine();
+String[] words = sentence.split("\\s+");
+Pattern pattern = Pattern.compile("\\b[aA]\\w{2}\\b");
+System.out.println("Short words starting with 'a' or 'A' and having exactly three
+characters:");
+for (String word : words) {
+Matcher matcher = pattern.matcher(word);
+if (matcher.matches()) {
+System.out.println(word);
+}
+}
+scanner.close();
+}
+}
+20)
+Develop application called "DataFinder" that reads a text document and locates specific data
+patterns using tokenizing and pattern matching techniques. The application should prompt
+the user to enter a file path for the text document and specify the data pattern to search for.
+Upon finding matches, the program should format and display the located data.
+Sample Input:
+Enter the file path of the text document: input.txt
+Enter the data pattern to search for: \\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b
+Expected Output:
+Match found: john@example.com
+Match found: alice@example.com
+ANSWER :
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+public class DataFinder {
+public static void main(String[] args) {
+Scanner scanner = new Scanner(System.in);
+System.out.print("Enter the file path of the text document: ");
+String filePath = scanner.nextLine();
+System.out.print("Enter the data pattern to search for: ");
+String dataPattern = scanner.nextLine();
+try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
+String line;
+while ((line = reader.readLine()) != null) {
+Pattern pattern = Pattern.compile(dataPattern);
+Matcher matcher = pattern.matcher(line);
+while (matcher.find()) {
+System.out.println("Match found: " + matcher.group());
+}
+}
+} catch (IOException e) {
+System.out.println("Error reading the file: " + e.getMessage());
+}
+scanner.close();
+}
+}
